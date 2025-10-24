@@ -1,0 +1,29 @@
+[project]
+name = "agentic-rag-knowledge-graph-base-framework"
+version = "0.1.0"
+description = "Extensible framework that fuses agentic RAG with Graphiti-backed knowledge graphs."
+requires-python = ">=3.11"
+authors = [
+    { name = "Ottomator Agents" }
+]
+dependencies = [
+    "fastapi>=0.110",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "typer>=0.12",
+    "uvicorn>=0.29",
+]
+
+[project.optional-dependencies]
+all = [
+    "asyncpg>=0.29",
+    "neo4j>=5.19",
+    "graphiti>=0.1.8",
+    "psycopg[binary]>=3.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+    "pytest-asyncio",
+]
